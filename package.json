@@ -1,0 +1,22 @@
+{
+  "name": "proyecto_cartas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./api/index.js",
+    "Build": "",
+    "start": "node ./api/index.js",
+    "serve": "node ./api/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "faunadb": "^4.8.0",
+    "graphql": "^16.8.1"
+  }
+}
