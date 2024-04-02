@@ -2,6 +2,7 @@ import { ApolloServer, gql } from "apollo-server";
 import pkg from 'faunadb';
 const { Client, Map, Paginate, Collection, Lambda, Get, Documents } = pkg;
 
+
 const client = new Client({
     secret: 'fnAFcUs2BgAASX-dEaDkemV0SU_DE2OsqzTCfOGm',
     domain: 'db.us.fauna.com',
@@ -12,6 +13,10 @@ const client = new Client({
 const typeDefs = gql`
   type Carta {
     Titulo: String
+    Tipo: String
+    Habilidades: String
+    Descripcion: String
+    Imagen: String
     Promedio: Float
   }
 
