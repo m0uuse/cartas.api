@@ -22,7 +22,7 @@ const typeDefs = gql`
 
   type Query {
     GetCartas: [Carta]
-    SumaPromediosCartas: Float
+    sumaPromediosCartas(cartas: [Carta!]!): Float
     sumaNumeros(numeros: [Float!]!): Float
   }
 `;
