@@ -22,6 +22,7 @@ const typeDefs = gql`
 
   type Query {
     GetCartas: [Carta]
+    SumaPromediosCartas: Float
   }
 `;
 
@@ -40,6 +41,11 @@ const resolvers = {
 
             return cartas;
         },
+        SumaPromediosCartas: async (_, { cartas }) => {
+            const promedios = cartas.map(carta => carta.Promedio);
+            const sumaPromedios = promedios.reduce((acc, promedio) => acc + promedio, 0);
+            return sumaPromedios;
+        }        
     },
 };
 
