@@ -24,6 +24,7 @@ const typeDefs = gql`
     GetCartas: [Carta]
     SumaPromediosCartas: Float
     sumaNumeros(numeros: [Float!]!): Float
+    promediar(numeros: [Float!]!): Float
   }
 `;
 
@@ -49,6 +50,11 @@ const resolvers = {
         },
         sumaNumeros: (_, { numeros }) => {
             return numeros.reduce((acc, num) => acc + num, 0);
+        },
+        promediar: (_, { numeros }) => {
+            const suma = numeros.reduce((acc, num) => acc + num, 0);
+            const promedio = suma / numeros.length;
+            return promedio;
         }
     },
 };
